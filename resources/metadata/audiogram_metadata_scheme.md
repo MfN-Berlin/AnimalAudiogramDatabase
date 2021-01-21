@@ -2,7 +2,7 @@
 
 ## About this document
 
-This document describes the audiogram metadata scheme used in the AAD. It's elements specify properties of the experimental procedure (experiment details), the animal subjects used in the experiments (animal details), and the source of the data (publication details) of an audiometric experiment yielding audiogram data.
+This document describes the audiogram metadata scheme used in the AAD. Its elements specify properties of the experimental procedure (experiment details), the animal subjects used in the experiments (animal details), and the source of the data (publication details) of an audiometric experiment yielding audiogram data.
 This scheme was initially developed based on research community feedback on metadata necessary for interpretation and reuse of audiogram data within the project [Hearing in Penguins](https://unterwasserlaerm.museumfuernaturkunde.berlin/en/project-hearing-in-penguins/about-us). Subsequently, these attributes were used to curate audiogram datasets from the literature and represent both the measurement data and the associated data about the test animals and experimental procedures in the [Animal Audiogram Database](https://animalaudiograms.museumfuernaturkunde.berlin).
 
 ## Category 1: Animal details
