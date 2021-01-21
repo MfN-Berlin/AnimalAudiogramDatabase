@@ -5,4 +5,4 @@ The database is accessible here: https://animalaudiograms.museumfuernaturkunde.b
 
 The database is drafted as a **free and open resource** whose structure and content can be extended by **collaborative development** for audiogram data from any taxonomic group and habitat.
 
-This repo serves to collate resources in the context of the database and foster joint, collaborative development of the database's contents and features.
+**This repository** serves to collate resources in the context of the database and foster joint, collaborative development of the database's contents and features.
