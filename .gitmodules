@@ -1,3 +1,6 @@
 [submodule "API"]
 	path = API
 	url = git@github.com:MfN-Berlin/AnimalAudiogramDatabase_API.git
+[submodule "Frontend"]
+	path = Frontend
+	url = git@github.com:MfN-Berlin/AnimalAudiogramDatabase_Drupal.git
