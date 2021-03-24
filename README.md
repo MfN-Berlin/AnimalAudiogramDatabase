@@ -11,3 +11,7 @@ The database is drafted as a **free and open resource** whose structure and cont
 * Let us know about your experience with the AAD - file an [issue](https://github.com/MfN-Berlin/AnimalAudiogramDatabase/issues) on bugs, errors in the data, notify us about new data or propose specific additions or changes
 * help with existing [issues](https://github.com/MfN-Berlin/AnimalAudiogramDatabase/issues)
 * Participate in existing [discussions](https://github.com/MfN-Berlin/AnimalAudiogramDatabase/discussions) in the context of AAD or start one on a new topic of interest
+
+# Installation
+Instructions for installing a clone of the database (e.g. for development) are in the file `CLONE.md`.
+

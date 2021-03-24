@@ -1,0 +1,55 @@
+version: '3'
+services:
+   db:
+      image: mariadb:10.4
+      container_name: ${DB_CONTAINER_NAME}
+      environment:
+        MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      volumes:
+      - "./mount/db:/var/lib/mysql"
+
+   api:
+      build: API
+      image: aot29/aad_data_exchange:latest
+      container_name: aad_api
+      ports:
+       - "9082:5000"
+      volumes:
+        - "./API/src:/src"
+        - "./audiogram_data:/data"
+      links:
+       - redis
+      entrypoint: /bin/bash /src/entrypoint.sh
+       
+   redis:
+      image: redis:5.0.7
+      container_name: aad_redis
+
+   frontend:
+      image: aot29/aad_frontend:latest
+      container_name: aad_frontend
+      ports:
+         - "80:80"
+      links:
+         - db
+      volumes:
+        - "./mount/html:/var/www/html/"
+        - "./Frontend:/var/www/html/modules/custom/audiogrambase"
+        - "./Log_analysis/report.html:/var/www/html/report.html"
+        - "./Log_analysis/leitfaden-loganalyse.pdf:/var/www/html/leitfaden-loganalyse.pdf"
+
+   admin:
+      image: aot29/aad_data_exchange:latest
+      container_name: aad_admin
+      ports:
+       - "9083:5000"
+      volumes:
+        - "./Admin/src:/src"
+      entrypoint: /bin/bash /src/entrypoint.sh   
+
+   log-analysis-goaccess:
+      image: aot29/log-analysis-goaccess:latest
+      container_name: aad_goa
+      entrypoint: /mount/entry.sh
+      volumes:
+        - "./Log_analysis/:/mount"

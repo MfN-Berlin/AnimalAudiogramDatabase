@@ -4,3 +4,9 @@
 [submodule "Frontend"]
 	path = Frontend
 	url = git@github.com:MfN-Berlin/AnimalAudiogramDatabase_Drupal.git
+[submodule "Log_analysis"]
+	path = Log_analysis
+	url = git@github.com:MfN-Berlin/log-analysis-goaccess.git
+[submodule "Admin"]
+	path = Admin
+	url = git@github.com:MfN-Berlin/AnimalAudiogramDatabase_Admin
