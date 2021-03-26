@@ -16,7 +16,6 @@ services:
        - "9082:5000"
       volumes:
         - "./API/src:/src"
-        - "./audiogram_data:/data"
       links:
        - redis
       entrypoint: /bin/bash /src/entrypoint.sh
