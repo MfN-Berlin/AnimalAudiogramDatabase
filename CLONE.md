@@ -43,9 +43,13 @@ Five containers will be started:
 # Settings
 Copy the file `env.tpl` to `.env` and set passwords or alternatively obtain a configuration file.
 
-Copy the `.env` file to the API directory
+Copy the `.env` file to the Admin/src directory
 
-`cp .env API/src/API/api.ini`
+`cp .env Admin/src/`
+
+Copy the `.env` file to the API/src/API directory
+
+`cp .env API/src/API`
 
 # Backend configuration
 Obtain a SQL dump of the audiogram data, e.g. from a backup. Copy the dump to the database container
@@ -81,6 +85,12 @@ If you are running only this application on your machine, then the provided conf
 However, if you are running several services on a single machine, you will need to:
 * Check in `docker-compose.yml` that all ports are free, otherwise edit them
 * Use a reverse proxy, e.g.Pound, to map the external URLs to the internal ports. A sample Pound configuration is provided in `resources/network`.
+
+# Verifying
+Test if the installation was successfull:
+* http://localhost should show the frontend
+* http://localhost:9083/admin/v1/start should show the administration backend
+* http://localhost:9082/ should show the message 'Audiogrambase API'
 
 ## Troubleshooting
 
