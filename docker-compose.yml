@@ -9,7 +9,6 @@ services:
       - "./mount/db:/var/lib/mysql"
 
    api:
-      build: API
       image: aot29/aad_data_exchange:latest
       container_name: aad_api
       ports:
